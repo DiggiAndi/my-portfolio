@@ -1,0 +1,32 @@
+<mat-toolbar
+  color="primary"
+  class="fixed top-0 w-full z-50 nav-toolbar"
+  [class.hidden]="isHidden">
+  <!-- Logo und Titel -->
+  <div class="toolbar-container">
+    <img src="assets/logo.png" alt="Logo" class="logo" aria-label="Seitenlogo">
+    <span class="toolbar-title">Diggi Andi</span>
+  </div>
+
+  <!-- Menü-Button für Mobilgeräte -->
+  <mat-icon
+    class="menu-icon"
+    (click)="toggleMenu()"
+    aria-label="Navigationsmenü umschalten">menu</mat-icon>
+
+  <!-- Desktop-Navigation -->
+  <div class="nav-buttons">
+    <button mat-button class="nav-button" routerLink="/home" routerLinkActive="active-link">Startseite</button>
+    <button mat-button class="nav-button" routerLink="/projects" routerLinkActive="active-link">Projekte</button>
+    <button mat-button class="nav-button" routerLink="/about" routerLinkActive="active-link">Über mich</button>
+    <button mat-button class="nav-button" routerLink="/contact" routerLinkActive="active-link">Kontakt</button>
+  </div>
+
+  <!-- Mobile Menü -->
+  <div class="mobile-menu" *ngIf="menuOpened" [class.active]="menuOpened">
+    <button mat-button class="nav-button" routerLink="/home" routerLinkActive="active-link" (click)="toggleMenu()">Startseite</button>
+    <button mat-button class="nav-button" routerLink="/projects" routerLinkActive="active-link" (click)="toggleMenu()">Projekte</button>
+    <button mat-button class="nav-button" routerLink="/about" routerLinkActive="active-link" (click)="toggleMenu()">Über mich</button>
+    <button mat-button class="nav-button" routerLink="/contact" routerLinkActive="active-link" (click)="toggleMenu()">Kontakt</button>
+  </div>
+</mat-toolbar>

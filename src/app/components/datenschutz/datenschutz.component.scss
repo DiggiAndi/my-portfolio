@@ -1,0 +1,77 @@
+.datenschutz-container {
+  font-family: 'Arial', sans-serif; /* Lesbare Schriftart */
+  line-height: 1.6; /* Gute Lesbarkeit */
+  color: #333; /* Textfarbe */
+  background: linear-gradient(to bottom, #d7d6e2, #e0d0d0);
+  padding: 20px; /* Innenabstand */
+  border: 1px solid #ddd; /* Dezenter Rahmen */
+  border-radius: 5px; /* Abgerundete Ecken */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Schatten für Tiefe */
+  margin: 20px auto; /* Zentrierte Darstellung */
+  max-width: 900px; /* Begrenzte Breite */
+}
+
+/* Überschriften in der Datenschutzerklärung */
+.datenschutz-container h2,
+.datenschutz-container h3 {
+  color: #2c3e50; /* Angenehmes Dunkelblau */
+  margin-bottom: 15px; /* Abstand zum Text */
+  font-weight: bold; /* Fett */
+}
+
+/* Absatzstil */
+.datenschutz-container p {
+  font-size: 1rem; /* Standardgröße */
+  color: #555; /* Dezente Textfarbe */
+  margin-bottom: 15px; /* Abstand zwischen Absätzen */
+}
+
+/* Listen */
+.datenschutz-container ul {
+  list-style-type: disc; /* Punkte als Markierung */
+  margin-left: 20px; /* Abstand nach links */
+  padding-left: 10px; /* Zusätzlicher Innenabstand */
+}
+
+.datenschutz-container ul li {
+  margin-bottom: 10px; /* Abstand zwischen Listeneinträgen */
+}
+
+/* Globale Einstellungen für den Hintergrund */
+html, body {
+  margin: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom, #4c49ff, #f79d9d); /* Standard Farbverlauf */
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  background-color: #333;
+  color: #fff;
+}
+
+/* Mobile Optimierungen */
+@media (max-width: 768px) {
+  .datenschutz-container {
+      padding: 15px;
+  }
+
+  .datenschutz-container h2,
+  .datenschutz-container h3 {
+      font-size: 1.5rem;
+  }
+
+  .datenschutz-container p {
+      font-size: 0.9rem;
+  }
+
+  .datenschutz-container ul {
+      margin-left: 15px;
+  }
+}

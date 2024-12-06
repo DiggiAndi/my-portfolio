@@ -1,0 +1,77 @@
+<!-- Header-Bereich -->
+<div class="header">
+  <canvas id="codeCanvas"></canvas>
+  <div class="profile">
+    <h1>Andreas Müller</h1>
+    <h2>Fullstack Developer</h2>
+  </div>
+</div>
+
+<!-- Features-Bereich -->
+<div class="features-section">
+  <div class="feature-card">
+    <img src="/assets/WOWEfekt.png" alt="WOW-Effekt" />
+    <h3>Kreativität und Innovation</h3>
+    <p>Ich kombiniere kreative Ideen mit modernster Technologie, um innovative Lösungen zu schaffen.</p>
+  </div>
+  <div class="feature-card">
+    <img src="/assets/communication.png" alt="Kommunikation" />
+    <h3>Effiziente Kommunikation</h3>
+    <p>Mit klaren Strukturen und Benutzerfreundlichkeit sorge ich für reibungslose digitale Erlebnisse.</p>
+  </div>
+  <div class="feature-card">
+    <img src="/assets/custom-websites.png" alt="Maßgeschneiderte Lösungen" />
+    <h3>Maßgeschneiderte Lösungen</h3>
+    <p>Individuell entwickelte Anwendungen, die perfekt auf die Bedürfnisse abgestimmt sind.</p>
+  </div>
+</div>
+
+<!-- Zertifikate-Galerie -->
+<h2 class="gallery-heading">Meine Zertifikate von LinkedIn</h2>
+<div class="certificates-gallery">
+  <div class="certificate-card">
+    <img
+      src="/assets/Abschlusszertifikat_AngularEntwicklerin.png"
+      alt="Angular Zertifikat"
+      (click)="openCertificate('/assets/Abschlusszertifikat_AngularEntwicklerin.png')"
+      loading="lazy"
+    />
+    <p class="certificate-caption">Abschlusszertifikat Angular Entwicklerin</p>
+  </div>
+  <div class="certificate-card">
+    <img
+      src="/assets/Abschlusszertifikat_WebApplikationenmitFirebase.png"
+      alt="Firebase Zertifikat"
+      (click)="openCertificate('/assets/Abschlusszertifikat_WebApplikationenmitFirebase.png')"
+      loading="lazy"
+    />
+    <p class="certificate-caption">Abschlusszertifikat Web Applikationen mit Firebase</p>
+  </div>
+  <div class="certificate-card">
+    <img
+      src="/assets/Abschlusszertifikat_ErfolgreicheKommunikation.png"
+      alt="Kommunikation Zertifikat"
+      (click)="openCertificate('/assets/Abschlusszertifikat_ErfolgreicheKommunikation.png')"
+      loading="lazy"
+    />
+    <p class="certificate-caption">Abschlusszertifikat Erfolgreiche Kommunikation</p>
+  </div>
+  <div class="certificate-card">
+    <img
+      src="/assets/Abschlusszertifikat_Ablaufdiagrammeverstehenunderstellen.png"
+      alt="Ablaufdiagramme Zertifikat"
+      (click)="openCertificate('/assets/Abschlusszertifikat_Ablaufdiagrammeverstehenunderstellen.png')"
+      loading="lazy"
+    />
+    <p class="certificate-caption">Abschlusszertifikat Ablaufdiagramme</p>
+  </div>
+</div>
+
+<!-- Popup für vergrößertes Zertifikat -->
+<div class="certificate-popup" *ngIf="selectedCertificate">
+  <div class="popup-overlay" (click)="closeCertificate()"></div>
+  <div class="popup-content">
+    <img [src]="selectedCertificate" alt="Vergrößertes Zertifikat" />
+    <button (click)="closeCertificate()">Schließen</button>
+  </div>
+</div>

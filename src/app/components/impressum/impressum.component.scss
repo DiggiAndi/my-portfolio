@@ -1,0 +1,66 @@
+.impressum-container {
+    max-width: 800px;
+    margin: 20px auto; /* Zentriere den Inhalt */
+    padding: 20px; /* Innenabstand */
+    background: linear-gradient(to bottom, #4c49ff, #9b76c7,);
+    
+    border: 1px solid #ddd; /* Subtiler Rahmen */
+    border-radius: 10px; /* Runde Ecken */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Schatten für Tiefe */
+  }
+  
+  .impressum-container h1 {
+    text-align: center; /* Zentriere die Überschrift */
+    color: #2c3e50; /* Dunkler Blauton */
+    margin-bottom: 20px; /* Abstand unter der Überschrift */
+    font-size: 2rem;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .impressum-content {
+    font-family: "Arial", sans-serif; /* Klare Schriftart */
+    font-size: 1rem; /* Standard-Schriftgröße */
+    line-height: 1.6; /* Angenehmer Zeilenabstand */
+    color: #333; /* Dunkle Textfarbe */
+  }
+  
+  .impressum-content p {
+    margin-bottom: 15px; /* Abstand zwischen den Absätzen */
+  }
+  
+  .impressum-content h2 {
+    margin-top: 20px; /* Abstand oberhalb der Sektion */
+    color: #2c3e50; /* Gleiche Farbe wie die Hauptüberschrift */
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  
+  .impressum-content a {
+    color: #030303; /* Blau für Links */
+    text-decoration: none; /* Entferne die Unterstreichung */
+    transition: color 0.3s ease-in-out; /* Sanfter Übergang */
+  }
+  
+  .impressum-content a:hover {
+    color: #ff6347; /* Ändere die Farbe beim Hover */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .impressum-container {
+      padding: 15px; /* Weniger Innenabstand */
+    }
+  
+    .impressum-content h1 {
+      font-size: 1.8rem; /* Kleinere Schriftgröße */
+    }
+  
+    .impressum-content h2 {
+      font-size: 1.4rem;
+    }
+  
+    .impressum-content p {
+      font-size: 0.9rem; /* Kleinere Schriftgröße für mobilen Bildschirm */
+    }
+  }
+  

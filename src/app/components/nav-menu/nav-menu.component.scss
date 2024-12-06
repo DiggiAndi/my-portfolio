@@ -1,0 +1,161 @@
+/* Hauptcontainer der Navigationsleiste */
+.nav-toolbar {
+  display: flex;
+  justify-content: space-between; /* Platz zwischen Logo und Buttons */
+  align-items: center; /* Zentriert die Elemente vertikal */
+  padding: 0 16px; /* Abstand innen */
+  position: fixed; /* Toolbar bleibt oben fixiert */
+  top: 0; /* Oben am Bildschirm positionieren */
+  left: 0;
+
+  z-index: 100; /* Stellt sicher, dass die Toolbar über anderen Elementen liegt */
+  background-color: #002d43b9; /* Primärfarbe der Toolbar */
+  height: 70px; /* Höhe der Toolbar */
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Übergänge für Animationen */
+
+  /* Versteckt die Toolbar mit einer Animation */
+  &.hidden {
+    transform: translateY(-100%); /* Nach oben aus dem Sichtfeld schieben */
+    opacity: 0; /* Unsichtbar machen */
+  }
+
+  /* Sichtbar machen */
+  :not(.hidden) {
+    transform: translateY(0); /* Zurück ins Sichtfeld */
+    opacity: 1; /* Voll sichtbar */
+  }
+
+  /* Container für Logo und Titel */
+  .toolbar-container {
+    display: flex; /* Ordnet Logo und Titel nebeneinander */
+    align-items: center; /* Zentriert die Elemente vertikal */
+
+    /* Logo */
+    .logo {
+      height: 60px; /* Höhe des Logos */
+      margin-right: 50px; /* Abstand zwischen Logo und Titel */
+    }
+    
+
+    /* Titel */
+    .toolbar-title {
+      font-size: 1.9rem; /* Schriftgröße des Titels */
+      font-weight: normal; /* Fettgedruckter Text */
+      color: #ffffff; /* Weißer Text */
+      font-family: 'Lobster'; /* Setzt die Schriftart Lobster */
+    }
+  }
+
+  /* Hamburger-Menü-Icon für mobile Geräte */
+  .menu-icon {
+    display: none; /* Verstecke standardmäßig */
+    font-size: 2rem; /* Größe des Icons */
+    cursor: pointer; /* Zeigt den Mauszeiger als Hand an */
+    color: #ffffff; /* Weißes Icon */
+  }
+
+  /* Navigations-Buttons */
+  .nav-buttons {
+    display: flex; /* Buttons nebeneinander anzeigen */
+    gap: 24px; /* Abstand zwischen den Buttons */
+
+    .nav-button {
+      font-family: 'Roboto', sans-serif; /* Schriftart ändern */
+      font-size: 1.1rem; /* Schriftgröße */
+      font-weight: 500; /* Mittleres Gewicht */
+      color: #ffffff; /* Weißer Text */
+      text-transform: uppercase; /* Alle Buchstaben großschreiben */
+      transition: background-color 0.3s ease-in-out; /* Glatte Hintergrundänderung beim Hover */
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.1); /* Transparenter Hintergrund beim Hover */
+      }
+    }
+  }
+
+  /* Responsive Design für Mobilgeräte */
+  @media screen and (max-width: 768px) {
+    /* Verstecke Buttons auf mobilen Geräten */
+    .nav-buttons {
+      display: none;
+    }
+
+    /* Zeige das Hamburger-Menü-Icon */
+    .menu-icon {
+      display: block;
+    }
+  }
+}
+
+/* Mobiles Menü für kleine Bildschirme */
+.mobile-menu {
+  position: absolute;
+  top: 64px; /* Unterhalb der Toolbar */
+  right: 0; /* Am rechten Rand ausrichten */
+  background-color: #07007f; /* Gleiche Farbe wie die Toolbar */
+  width: 100%; /* Volle Breite */
+  display: flex; /* Vertikale Ausrichtung */
+  flex-direction: column; /* Buttons untereinander anzeigen */
+  gap: 16px; /* Abstand zwischen den Buttons */
+  padding: 16px; /* Abstand innen */
+  transform: translateY(-100%); /* Standardmäßig außerhalb des sichtbaren Bereichs */
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Glatter Übergang beim Ein- und Ausblenden */
+
+  &.active {
+    transform: translateY(0); /* Blendet das Menü ein */
+    opacity: 1; /* Voll sichtbar */
+  }
+
+  .nav-button {
+    font-size: 1.2rem; /* Größere Schrift */
+    color: #ffffff; /* Weißer Text */
+    text-align: center; /* Text linksbündig ausrichten */
+}
+  .nav-toolbar {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Leichter Schatten */
+}
+
+}
+
+.certificates-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); // Flexible Spalten
+  gap: 20px; // Abstand zwischen den Zertifikaten
+  padding: 40px; // Abstand zur Umgebung
+  background-color: #f9f9f9; // Heller Hintergrund für Kontrast
+  border-top: 2px solid #e1e1e1; // Trennlinie nach oben
+
+  .certificate-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 4px;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 1rem;
+      font-weight: bold;
+      color: #333;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .certificates-gallery {
+    grid-template-columns: 1fr; // Eine Spalte auf kleinen Bildschirmen
+    padding: 20px;
+  }
+}

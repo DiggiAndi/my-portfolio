@@ -1,13 +1,50 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>MyPortfolio</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body>
-  <app-root></app-root>
-</body>
+  <!-- Die Sprache für die gesamte Seite wird hier angegeben -->
+  <!-- "en" bedeutet Englisch. Alternativen: "de" für Deutsch, "fr" für Französisch usw. -->
+  <head>
+    <!-- Festlegung des Zeichensatzes für die Webseite -->
+    <!-- "utf-8" ist der Standard und unterstützt nahezu alle Zeichen -->
+    <!-- Alternative: "ISO-8859-1" für ältere Projekte (weniger empfohlen) -->
+    <meta charset="utf-8" />
+
+    <!-- Der Titel der Seite, der im Browser-Tab angezeigt wird -->
+    <!-- Alternativen: Je nach SEO-Strategie kann der Titel dynamisch angepasst werden -->
+    <title>My Portfolio</title>
+
+    <!-- Basis-URL für relative Links -->
+    <!-- Alternativen: Kann entfernt werden, wenn absolute Links verwendet werden -->
+    <base href="/" />
+
+    <!-- Meta-Tag für die Skalierung und Anzeige auf mobilen Geräten -->
+    <!-- "width=device-width" passt die Breite an das Gerät an -->
+    <!-- "initial-scale=1" sorgt für eine 1:1-Ansicht -->
+    <!-- Alternative: Hinzufügen von "shrink-to-fit=no" für ältere Geräte -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Favicon für die Browser-Registerkarte -->
+    <!-- Typ: "image/x-icon" ist der Standard für .ico-Dateien -->
+    <!-- Alternativen: "image/png" für PNG-Icons oder "image/svg+xml" für SVG-Icons -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <!-- Material Icons: Einbindung von Google Material Icons für Standard-Symbole -->
+    <!-- Alternative: Andere Icon-Bibliotheken wie FontAwesome oder HeroIcons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <!-- Google Fonts: Einbindung von Schriftarten -->
+    <!-- "Roboto" ist eine moderne und klare Schriftart für allgemeinen Text -->
+    <!-- "Lobster" wird für dekorative Überschriften verwendet -->
+    <!-- Alternativen: Montserrat, Poppins, Open Sans (je nach Design-Präferenz) -->
+    
+  </head>
+  <body>
+    <!-- Root-Komponente des Angular-Projekts -->
+    <!-- <app-root> ist der Einstiegspunkt für die Angular-App -->
+    <!-- ngSkipHydration: Optimierung für serverseitiges Rendering -->
+    <!-- Alternative: Ohne ngSkipHydration, wenn keine Server-Hydration benötigt wird -->
+    <app-root ngSkipHydration></app-root>
+  </body>
 </html>

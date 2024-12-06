@@ -1,1 +1,104 @@
-/* You can add global styles to this file, and also import other style files */
+/* Globale Stile für die gesamte HTML-Struktur */
+html, body {
+  margin: 0; /* Entferne alle Standardabstände */
+  height: 100%; /* Vollständige Höhe für flexibles Layout */
+  display: flex; /* Verwende Flexbox für die Hauptstruktur */
+  flex-direction: column; /* Elemente (z. B. Header, Footer) werden vertikal ausgerichtet */
+}
+
+/* Hauptstil für den Body */
+body {
+  font-family: 'Roboto Condensed', sans-serif; /* Ändere die Schriftart zu Roboto Condensed */
+  font-size: 16px; /* Setze die Basis-Schriftgröße */
+  line-height: 1.6; /* Erhöhe den Zeilenabstand für bessere Lesbarkeit */
+  color: #333; /* Setze eine dunklere Textfarbe für Kontrast */
+  padding-top: 35px; /* Abstand zur fixierten Navbar */
+  margin: 0; /* Entferne Ränder */
+  background: linear-gradient(to bottom, #4c49ff, #f79d9d);
+}
+
+/* Entferne Standardabstände und -rahmen für alle Elemente */
+* {
+  box-sizing: border-box; /* Stellt sicher, dass Padding und Border in die Breite/Höhe einbezogen werden */
+  margin: 0;
+  padding: 0;
+}
+
+/* Root-Komponente für Angular */
+app-root {
+  display: flex;
+  flex-direction: column; /* Richte Inhalte vertikal aus */
+  flex: 1; /* Erlaube dem Hauptinhalt, den verfügbaren Platz zu nutzen */
+}
+
+/* Schriftart Roboto Condensed einbinden */
+@font-face {
+  font-family: 'Roboto Condensed';
+  src: url('/assets/fonts/RobotoCondensed-ExtraBoldItalic.ttf') format('truetype');
+  font-style: italic;
+  font-weight: 800; /* Extra Bold Gewicht */
+}
+
+/* Überschriften-Stile */
+h1, h2, h3 {
+  font-family: 'Roboto Condensed', sans-serif; /* Nutze die neue Schriftart */
+  font-weight: 800; /* Extra Bold */
+  margin-bottom: 1rem; /* Füge Abstand unter Überschriften hinzu */
+  color: #222; /* Dunklere Farbe für Überschriften */
+}
+
+/* Spezielle Schriftgrößen für verschiedene Überschriften */
+h1 {
+  font-size: 2.5rem; /* Extra große Schriftgröße für H1 */
+}
+
+h2 {
+  font-size: 2rem; /* Große Schriftgröße für H2 */
+}
+
+h3 {
+  font-size: 1.75rem; /* Mittlere Schriftgröße für H3 */
+}
+
+/* Absatzstil */
+p {
+  font-size: 1.1rem; /* Etwas größere Schriftgröße für Absätze */
+  margin-bottom: 1rem; /* Füge Abstand zwischen Absätzen hinzu */
+}
+
+/* Links-Stile */
+a {
+  color: #6c63ff; /* Primärfarbe für Links */
+  text-decoration: none; /* Entferne die Standard-Unterstreichung */
+  transition: color 0.3s ease-in-out; /* Füge sanfte Übergänge hinzu */
+}
+
+a:hover {
+  color: #ff6347; /* Ändere die Farbe beim Hover */
+}
+
+/* Globale Button-Stile */
+button {
+  font-family: 'Roboto Condensed', sans-serif; /* Gleiche Schriftart wie im Body */
+  font-size: 1rem; /* Einheitliche Schriftgröße */
+  padding: 10px 20px; /* Definiere Innenabstände */
+  border: none; /* Entferne Ränder */
+  border-radius: 5px; /* Runde die Ecken ab */
+  background-color: #6c63ff; /* Primärfarbe */
+  color: #fff; /* Weißer Text */
+  cursor: pointer; /* Zeige den Zeiger-Cursor an */
+  transition: background-color 0.3s ease-in-out; /* Übergang bei Hover */
+}
+
+button:hover {
+  background-color: #5a52e0; /* Leichter Farbwechsel beim Hover */
+}
+
+/* Footer-Stil */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem; /* Etwas kleinere Schriftgröße */
+  background-color: #333; /* Dunkler Hintergrund */
+  color: #fff; /* Weißer Text */
+}
